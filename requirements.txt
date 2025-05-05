@@ -3,9 +3,10 @@ pypdf
 langchain
 python-dotenv
 pinecone[grpc]
+langchain_groq
+langchain_openai
 langchain-pinecone
 langchain_community
-langchain_openai
 langchain_experimental
 sentence-transformers==2.2.2
 -e .
