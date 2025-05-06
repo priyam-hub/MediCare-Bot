@@ -1,10 +1,12 @@
 flask
 pypdf
 langchain
+streamlit
 python-dotenv
 pinecone[grpc]
 langchain_groq
 langchain_openai
+streamlit-lottie
 langchain-pinecone
 langchain_community
 langchain_experimental
