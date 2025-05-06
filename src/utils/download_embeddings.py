@@ -1,7 +1,7 @@
 # DEPENDENCIES
 
-from langchain.embeddings import HuggingFaceEmbeddings
 from torch import log_
+from langchain_community.embeddings import HuggingFaceEmbeddings
 
 from .logger import LoggerSetup
 
