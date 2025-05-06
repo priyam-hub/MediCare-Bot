@@ -1,5 +1,4 @@
 .env
-data/
 logs/
 *.egg-info/
 *.DS_Store
