@@ -7,10 +7,14 @@ from dotenv import load_dotenv
 from config.config import Config
 from src.utils.logger import LoggerSetup
 from src.utils.load_pdf import PDF_Loader
+from src.llm.llm_builder import LLMBuilder
 from langchain_pinecone import PineconeVectorStore
+from langchain.chains import create_retrieval_chain
+from src.prompts.prompt_builder import PromptBuilder
 from src.text_splitting.split_text import TextSplitter
 from src.utils.download_embeddings import EmbeddingDownloader
 from src.vector_index.index_manager import PineconeIndexManager
+from langchain.chains.combine_documents import create_stuff_documents_chain
 
 import warnings
 warnings.filterwarnings(action = "ignore")
@@ -19,6 +23,8 @@ warnings.filterwarnings(action = "ignore")
 load_dotenv()
 PINECONE_API_KEY                = os.environ.get('PINECONE_API_KEY')
 os.environ["PINECONE_API_KEY"]  = PINECONE_API_KEY
+GROQ_API_KEY                    = os.environ.get('GROQ_API_KEY')
+os.environ["GROQ_API_KEY"]      = GROQ_API_KEY
 
 # LOGGER SETUP
 main_logger                     = LoggerSetup(logger_name = "main.py", log_filename_prefix = "main").get_logger()
@@ -65,7 +71,26 @@ def main():
         retriever               = docsearch.as_retriever(search_type    = "similarity",
                                                          search_kwargs  = {"k":5})
         
-        main_logger.info(f"Created retriever with {len(docsearch)} documents.")
+        main_logger.info(f"Retireval Augmented Generation (RAG) Chain Initialized Successfully")
+
+        prompt_builder          = PromptBuilder()
+        prompt                  = prompt_builder.build_prompt()
+
+        llm_builder             = LLMBuilder(api_key      = GROQ_API_KEY, 
+                                             temperature  = 0.4, 
+                                             model_name   = Config.LARGE_LANGUAGE_MODEL_ID
+                                             )
+        
+        llm                     = llm_builder.build_llm()
+
+        main_logger.info("Prompt and Large Language Model Initialized Successfully")
+
+        question_answer_chain   = create_stuff_documents_chain(llm, prompt)
+        rag_chain               = create_retrieval_chain(retriever, question_answer_chain)
+
+        response                = rag_chain.invoke({"input": "How to cure fever?"})
+
+        print(response["answer"])
         
     except Exception as e:
         main_logger.error(f"Error Occurred in Main Function: {repr(e)}")

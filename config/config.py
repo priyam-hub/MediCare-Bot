@@ -16,7 +16,7 @@ class Config:
     CLOUD                 = "aws"
     REGION                = "us-east-1"
 
-
+    LARGE_LANGUAGE_MODEL_ID = "llama3-8b-8192"
 
     @staticmethod
     def setup_directories():
