@@ -65,7 +65,8 @@ def main():
         retriever               = docsearch.as_retriever(search_type    = "similarity",
                                                          search_kwargs  = {"k":5})
         
-
+        main_logger.info(f"Created retriever with {len(docsearch)} documents.")
+        
     except Exception as e:
         main_logger.error(f"Error Occurred in Main Function: {repr(e)}")
 
