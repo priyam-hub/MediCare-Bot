@@ -167,6 +167,46 @@ Upon running, navigate to the provided local URL in your browser to interact wit
 
 ---
 
+## 🧠 Large Language Model Inference Comparison Chart
+
+| **Model ID**                                    | **Requests/Min** | **Requests/Day** | **Tokens/Min** | **Tokens/Day** |
+| ----------------------------------------------- | ---------------- | ---------------- | -------------- | -------------- |
+| `allam-2-7b`                                    | 30               | 7,000            | 6,000          | No limit       |
+| `compound-beta`                                 | 15               | 200              | 70,000         | No limit       |
+| `compound-beta-mini`                            | 15               | 200              | 70,000         | No limit       |
+| `deepseek-r1-distill-llama-70b`                 | 30               | 1,000            | 6,000          | No limit       |
+| `gemma2-9b-it`                                  | 30               | 14,400           | 15,000         | 500,000        |
+| `llama-3.1-8b-instant`                          | 30               | 14,400           | 6,000          | 500,000        |
+| `llama-3.3-70b-versatile`                       | 30               | 1,000            | 12,000         | 100,000        |
+| `llama-guard-3-8b`                              | 30               | 14,400           | 15,000         | 500,000        |
+| `llama3-70b-8192`                               | 30               | 14,400           | 6,000          | 500,000        |
+| `llama3-8b-8192`                                | 30               | 14,400           | 6,000          | 500,000        |
+| `meta-llama/llama-4-maverick-17b-128e-instruct` | 30               | 1,000            | 6,000          | No limit       |
+| `meta-llama/llama-4-scout-17b-16e-instruct`     | 30               | 1,000            | 30,000         | No limit       |
+| `mistral-saba-24b`                              | 30               | 1,000            | 6,000          | 500,000        |
+| `qwen-qwq-32b`                                  | 30               | 1,000            | 6,000          | No limit       |
+
+---
+
+## 📊 Success Rates of Different Meta-LlaMa Models
+
+| **Category**              | **Benchmark**                | **LLaMA 3 8B** | **LLaMA 2 7B** | **LLaMA 2 13B** | **LLaMA 3 70B** | **LLaMA 2 70B** |
+| ------------------------- | ---------------------------- | -------------- | -------------- | --------------- | --------------- | --------------- |
+| **General**               | MMLU (5-shot)                | 66.6           | 45.7           | 53.8            | 79.5            | 69.7            |
+|                           | AGIEval English (3–5 shot)   | 45.9           | 28.8           | 38.7            | 63.0            | 54.8            |
+|                           | CommonSenseQA (7-shot)       | 72.6           | 57.6           | 67.6            | 83.8            | 78.7            |
+|                           | Winogrande (5-shot)          | 76.1           | 73.3           | 75.4            | 83.1            | 81.8            |
+|                           | BIG-Bench Hard (3-shot, CoT) | 61.1           | 38.1           | 47.0            | 81.3            | 65.7            |
+|                           | ARC-Challenge (25-shot)      | 78.6           | 53.7           | 67.6            | 93.0            | 85.3            |
+| **Knowledge Reasoning**   | TriviaQA-Wiki (5-shot)       | 78.5           | 72.1           | 79.6            | 89.7            | 87.5            |
+| **Reading Comprehension** | SQuAD (1-shot)               | 76.4           | 72.2           | 72.1            | 85.6            | 82.6            |
+|                           | QuAC (1-shot, F1)            | 44.4           | 39.6           | 44.9            | 51.1            | 49.4            |
+|                           | BoolQ (0-shot)               | 75.7           | 65.5           | 66.9            | 79.0            | 73.1            |
+|                           | DROP (3-shot, F1)            | 58.4           | 37.9           | 49.8            | 79.7            | 70.2            |
+
+---
+
+
 ## 📁 Project Structure
 
 ```plaintext
@@ -220,6 +260,19 @@ MediCare-Bot/
         
 ```
 
+## 📜 License
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+<div align="center">
+
+**Made with ❤️ by Priyam Pal - AI and Data Science Engineer**
+
+[↑ Back to Top](#-affective-ai--understanding-emotions-through-text)
+
+</div>
 
 
 
