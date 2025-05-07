@@ -38,25 +38,25 @@ The dataset serves as the foundational knowledge base for the chatbot, allowing 
 ## 📌 Features
 
 * **Patient-Centric Design**
-  Focused on delivering helpful and compassionate responses tailored to user needs.
+  - Focused on delivering helpful and compassionate responses tailored to user needs.
 
 * **Trusted Medical Knowledge**
-  Built using information from reliable medical books to ensure accuracy.
+  - Built using information from reliable medical books to ensure accuracy.
 
 * **Natural Conversations**
-  Understands and responds in a human-like, conversational tone.
+  - Understands and responds in a human-like, conversational tone.
 
 * **Instant Answers**
-  Provides quick and relevant responses to a wide range of medical questions.
+  - Provides quick and relevant responses to a wide range of medical questions.
 
 * **Context-Aware**
-  Remembers and considers the context of your query for better responses.
+  - Remembers and considers the context of your query for better responses.
 
 * **User-Friendly Interface**
-  Simple and clean chat interface that's easy to use for everyone.
+  - Simple and clean chat interface that's easy to use for everyone.
 
 * **Secure and Private**
-  No personal data is stored or shared—ensuring privacy and confidentiality.
+  - No personal data is stored or shared—ensuring privacy and confidentiality.
 
 ---
 
