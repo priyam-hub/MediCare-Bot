@@ -62,7 +62,7 @@ The dataset serves as the foundational knowledge base for the chatbot, allowing 
 
 ## 🛠️ Installation
 
-### Step - 1: Repository Cloning
+#### Step - 1: Repository Cloning
 
 ```bash
 # Clone the repository
@@ -72,7 +72,7 @@ git clone https://github.com/priyam-hub/MediCare-Bot.git
 cd MediCare-Bot
 ```
 
-### Step - 2: Enviornmental Setup and Dependency Installation
+#### Step - 2: Enviornmental Setup and Dependency Installation
 
 ```bash
 # Run env_setup.sh
@@ -84,14 +84,14 @@ bash env_setup.sh
 # Python Version - 3.10
 ```
 
-### Step - 3: Create a .env file in the root directory to add Credentials
+#### Step - 3: Create a .env file in the root directory to add Credentials
 
 ```bash
 PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 GROQ_API_KEY  = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
 
-### Step - 4: Store the Vector Embeddings & Initialize RAG
+#### Step - 4: Store the Vector Embeddings & Initialize RAG
 
 ```bash
 
@@ -99,7 +99,7 @@ GROQ_API_KEY  = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 python main.py
 ```
 
-### Step - 5: Run the Flask Server
+#### Step - 5: Run the Flask Server
 
 ```bash
 
@@ -131,7 +131,7 @@ Upon running, navigate to the provided local URL in your browser to interact wit
 
 ---
 
-### 🧠 Artificial Intelligence Models Stack
+## 🧠 Artificial Intelligence Models Stack
 
 * **Vector Embedding – `sentence-transformers/all-MiniLM-L6-v2`**
   Lightweight and efficient embedding model for generating semantic vector representations of medical texts.
@@ -200,7 +200,6 @@ Upon running, navigate to the provided local URL in your browser to interact wit
 
 ---
 
-
 ## 📁 Project Structure
 
 ```plaintext
@@ -253,6 +252,38 @@ MediCare-Bot/
     └── app.py/                               # To run the flask server
         
 ```
+---
+
+## 🛠️ Future Work Roadmap
+
+### **🔹 Phase 1: Feature Expansion (1–2 Months)**
+
+**Goal**: Enhance user experience and improve core functionality.
+
+* Integrate symptom checker with dynamic conversation flow.
+* Add multilingual support for broader accessibility.
+* Implement feedback mechanism for users to rate chatbot responses.
+* Improve handling of edge cases in medical queries.
+
+### **🔹 Phase 2: Clinical Reliability & Compliance (3–4 Months)**
+
+**Goal**: Increase medical accuracy and build trust with regulatory alignment.
+
+* Collaborate with healthcare professionals for validation of responses.
+* Include references to verified medical literature in answers.
+* Ensure HIPAA/GDPR compliance for secure data handling.
+* Add a disclaimer and escalation option for complex queries.
+
+### **🔹 Phase 3: Real-Time Integration & Monitoring (5–6 Months)**
+
+**Goal**: Make the chatbot production-ready for deployment in real environments.
+
+* Integrate with wearable health devices and EMR/EHR systems.
+* Deploy monitoring system to track chatbot performance and anomalies.
+* Introduce voice interaction using Whisper or similar model.
+* Host full system with CI/CD on scalable cloud infrastructure (e.g., AWS/GCP).
+
+---
 
 ## 📜 License
 
