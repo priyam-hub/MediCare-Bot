@@ -88,9 +88,9 @@ def main():
         question_answer_chain   = create_stuff_documents_chain(llm, prompt)
         rag_chain               = create_retrieval_chain(retriever, question_answer_chain)
 
-        response                = rag_chain.invoke({"input": "How to cure fever?"})
+        # response                = rag_chain.invoke({"input": "How to cure fever?"})
 
-        print(response["answer"])
+        # print(response["answer"])
         
     except Exception as e:
         main_logger.error(f"Error Occurred in Main Function: {repr(e)}")

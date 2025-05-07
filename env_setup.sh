@@ -8,7 +8,7 @@ echo "1. Create Python Environment"
 echo "2. Create Conda Environment"
 read -p "Enter your choice (1 or 2): " choice
 
-ENV_NAME="emotion_detection_env"
+ENV_NAME="medical_chatbot_env"
 
 if [ "$choice" == "1" ]; then
     # Python Virtual Environment
