@@ -6,6 +6,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../")))
 
 from json import load
 from flask import Flask
+from pathlib import Path
 from flask import jsonify
 from flask import request
 from dotenv import load_dotenv
@@ -23,11 +24,14 @@ import warnings
 warnings.filterwarnings(action = "ignore")
 
 # LOADING ENVIRONMENT VARIABLES
-load_dotenv()
+dotenv_path                     = Path(__file__).resolve().parent.parent / '.env'
+load_dotenv(dotenv_path = dotenv_path)
+
 PINECONE_API_KEY                = os.environ.get('PINECONE_API_KEY')
-os.environ["PINECONE_API_KEY"]  = PINECONE_API_KEY
 GROQ_API_KEY                    = os.environ.get('GROQ_API_KEY')
-os.environ["GROQ_API_KEY"]      = GROQ_API_KEY
+
+print(f"Pinecone API Key: {PINECONE_API_KEY}")
+print(f"GROQ API Key: {GROQ_API_KEY}")
 
 app                             = Flask(__name__)
 
@@ -63,7 +67,7 @@ rag_chain                       = create_retrieval_chain(retriever, question_ans
 
 @app.route("/")
 def index():
-    return render_template('chat.html')
+    return render_template('index.html')
 
 
 @app.route("/medical_chat", methods = ["GET", "POST"])
@@ -86,4 +90,4 @@ def chat():
 
 
 if __name__ == '__main__':
-    app.run(host = "0.0.0.0", port = 8080, debug = True)
+    app.run(host = "0.0.0.0", port = 8080, debug = True, use_reloader = False)

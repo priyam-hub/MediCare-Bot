@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HealthCare Plus</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <script type="module" src="{{ url_for('static', filename='script.js') }}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">HealthCare Plus</div>
+      <div class="nav-links">
+        <a href="/" aria-current="page">Home</a>
+        <a href="#services">Services</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Your Health Is Our Priority</h1>
+          <p>Experience world-class healthcare services with our team of expert doctors.</p>
+          <button class="cta-button">Book Appointment</button>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+          <div class="service-card">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Cardiology</h3>
+            <p>Expert heart care services</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-brain"></i>
+            <h3>Neurology</h3>
+            <p>Specialized brain treatments</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-tooth"></i>
+            <h3>Dental Care</h3>
+            <p>Complete dental solutions</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="doctors" class="doctors">
+        <h2>Our Doctors</h2>
+        <div class="doctor-grid">
+          <div class="doctor-card">
+            <img src="https://images.pexels.com/photos/4173239/pexels-photo-4173239.jpeg" alt="Doctor">
+            <h3>Dr. Sarah Johnson</h3>
+            <p>Cardiologist</p>
+          </div>
+          <div class="doctor-card">
+            <img src="https://images.pexels.com/photos/4225880/pexels-photo-4225880.jpeg" alt="Doctor">
+            <h3>Dr. Michael Chen</h3>
+            <p>Neurologist</p>
+          </div>
+          <div class="doctor-card">
+            <img src="https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg" alt="Doctor">
+            <h3>Dr. Emily Brown</h3>
+            <p>Dentist</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="chat-button">
+      <i class="fas fa-comment-medical"></i>
+    </div>
+
+    <div class="chat-container">
+      <div class="chat-header">
+        <h3>Healthcare Assistant</h3>
+        <button class="close-chat"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="chat-messages"></div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type your message...">
+        <button class="send-message"><i class="fas fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </body>
+</html>
