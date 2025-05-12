@@ -82,6 +82,9 @@ bash env_setup.sh
 # Select 2 to create Conda Environment
 
 # Python Version - 3.10
+
+# Make the Project to run as a Local Package
+python setup.py
 ```
 
 #### Step - 3: Create a .env file in the root directory to add Credentials
