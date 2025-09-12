@@ -81,7 +81,10 @@ bash env_setup.sh
 # Select 1 to create Python Environment
 # Select 2 to create Conda Environment
 
-# Python Version - 3.10
+# Python Version - 3.11
+
+# Create Environment and Install Requirements Automatically
+conda env create -f environment.yml
 ```
 
 #### Step - 3: Create a .env file in the root directory to add Credentials

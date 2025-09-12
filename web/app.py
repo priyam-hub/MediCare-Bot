@@ -30,9 +30,6 @@ load_dotenv(dotenv_path = dotenv_path)
 PINECONE_API_KEY                = os.environ.get('PINECONE_API_KEY')
 GROQ_API_KEY                    = os.environ.get('GROQ_API_KEY')
 
-print(f"Pinecone API Key: {PINECONE_API_KEY}")
-print(f"GROQ API Key: {GROQ_API_KEY}")
-
 app                             = Flask(__name__)
 
 # LOGGER SETUP

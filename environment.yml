@@ -1,0 +1,23 @@
+name: medical_bot_env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - flask
+      - pypdf
+      - langchain
+      - streamlit
+      - python-dotenv
+      - langchain_groq
+      - langchain_openai
+      - streamlit-lottie
+      - langchain-pinecone
+      - langchain_community
+      - pinecone-client[grpc]
+      - langchain_experimental
+      - huggingface-hub==0.14.1
+      - sentence-transformers==2.2.2
+      - -e .

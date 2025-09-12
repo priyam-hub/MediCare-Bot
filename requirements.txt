@@ -10,5 +10,5 @@ streamlit-lottie
 langchain-pinecone
 langchain_community
 langchain_experimental
-sentence-transformers==2.2.2
+sentence-transformers
 -e .
