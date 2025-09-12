@@ -43,26 +43,29 @@ list_of_paths = [
 ]
 
 
-for path in list_of_paths:
-    path         = Path(path)
+for path_str in list_of_paths:
+    path = Path(path_str)
 
-    if path.suffix: 
+    if path_str.endswith("/"):  # Directory
         
-        if not path.parent.exists():
-            os.makedirs(path.parent, exist_ok = True)
-            
-            logging.info(f"Creating directory: {path.parent} for the file: {path.name}")
-
-        if not path.exists() or path.stat().st_size == 0:
-           
-            with open(path, "w") as f:
-                pass
-            
-            logging.info(f"Creating empty file: {path}")
+        if not path.exists():
+            os.makedirs(path, exist_ok=True)
+            logging.info(f"Created directory: {path}")
         
         else:
-            logging.info(f"{path.name} already exists")
+            logging.info(f"Directory already exists: {path}")
     
-    else:
-        os.makedirs(path, exist_ok = True)
-        logging.info(f"Creating directory: {path}")
+    else:  # File
+    
+        if not path.exists():
+    
+            if not path.parent.exists():
+                os.makedirs(path.parent, exist_ok=True)
+                logging.info(f"Created parent directory: {path.parent} for the file: {path.name}")
+    
+            with open(path, "w") as f:
+                pass
+            logging.info(f"Created empty file: {path}")
+    
+        else:
+            logging.info(f"File already exists: {path}")
