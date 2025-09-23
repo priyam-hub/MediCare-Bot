@@ -207,9 +207,9 @@ Upon running, navigate to the provided local URL in your browser to interact wit
 
 | Query | Result |
 |-------|--------|
-| *"I am Looking for women Black Top"* | ![Search Result 1](images/search_result_1.png) |
-| *"I am Looking for Women Red Kurtis"* | ![Search Result 2](images/search_result_2.png) |
-| *"Show me women blue jeans"* | ![Search Result 3](images/search_result_3.png) |
+| *"Give me medications of Fever"* | ![Search Result 1](images/search_result_1.png) |
+| *"Give me symptoms of High Fever"* | ![Search Result 2](images/search_result_2.png) |
+| *"What is Diabetes"* | ![Search Result 3](images/search_result_3.png) |
 
 ---
 
