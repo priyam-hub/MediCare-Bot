@@ -1,5 +1,6 @@
 .env
 logs/
+models/
 *.egg-info/
 *.DS_Store
 __pycache__/
